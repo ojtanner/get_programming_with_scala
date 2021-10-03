@@ -1,6 +1,9 @@
 package `1_absolute_basics`
 
 /**
+  * Classes
+  * ---
+  * 
   * Classes should be familiar to you if you come from a Java
   * background.
   * Scala classes are the same concept as in Java, but they
