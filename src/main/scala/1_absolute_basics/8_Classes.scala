@@ -54,4 +54,40 @@ object Classes {
   class TreasureChest(longitude: Int, latitude: Int)
 
   val xMarksTheSPot = new TreasureChest(longitude = 42, latitude = 69)
+
+  /**
+    * On to sub-classing. This should be familiar to you.
+    * The syntax is a bit more concise, though (which is
+    * not very hard when you consider Java's verbosity).
+    * 
+    * For one, you have to say "override" when overriding
+    * a super-class method.
+    */
+  class SpanishGreeterRobot() extends GreeterRobot {
+    override def greet(name: String): Unit = {
+      println("Hola, " + name)
+    }
+  }
+
+  /**
+    * Another interesting syntax is that you to pass the arguments
+    * needed by the superclass constructor.
+    */
+  class Human(name: String)
+  class Henry(name: String) extends Human(name)
+
+  /**
+    * Of course we also have abstract classes. How
+    * could we possibly write a decent program without
+    * those ???
+    */
+  abstract class LifeForm() {
+    def exist(): Unit
+  }
+  // won't work: val speckOfExistence = new LifeForm()
+
+  /**
+    * You do not need to specify "override" when implementing
+    * a abstract method.
+    */
 }
